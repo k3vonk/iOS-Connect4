@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Session" representedClassName="Session" syncable="YES">
+        <attribute name="botStart" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="move" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="Moves"/>
+        <attribute name="outcome" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="winningPieces" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[Int16]"/>
+    </entity>
+    <elements>
+        <element name="Session" positionX="-9" positionY="36" width="128" height="118"/>
+    </elements>
+</model>

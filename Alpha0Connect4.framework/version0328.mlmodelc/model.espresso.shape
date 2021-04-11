@@ -1,0 +1,466 @@
+{
+  "layer_shapes" : {
+    "batch_normalization_11_permute_add_5_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "flatten_2_output" : {
+      "k" : 84,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "output1" : {
+      "k" : 1,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "batch_normalization_4_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "leaky_re_lu_7_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "leaky_re_lu_2_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "output2" : {
+      "k" : 42,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "conv2d_3_permute_batch_normalization_3_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "add_1_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_5_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "add_2_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_6_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "add_3_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_2_permute_leaky_re_lu_2_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_5_permute_batch_normalization_5_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "add_4_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_6_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "add_5_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_8_permute_leaky_re_lu_8_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_12_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 1
+    },
+    "batch_normalization_12_permute_leaky_re_lu_12_output" : {
+      "k" : 1,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "dense_1_output" : {
+      "k" : 20,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "batch_normalization_13_permute_leaky_re_lu_14_output" : {
+      "k" : 2,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_7_permute_batch_normalization_7_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "batch_normalization_7_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "leaky_re_lu_10_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_8_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "leaky_re_lu_8_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_4_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "leaky_re_lu_3_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_9_permute_batch_normalization_9_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "batch_normalization_9_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "batch_normalization_7_permute_add_3_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_9_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "leaky_re_lu_12_output" : {
+      "k" : 1,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_2_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "input1" : {
+      "k" : 2,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "leaky_re_lu_4_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "leaky_re_lu_9_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_13_permute_batch_normalization_13_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 2
+    },
+    "batch_normalization_4_permute_leaky_re_lu_4_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_10_permute_leaky_re_lu_10_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_13_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 2
+    },
+    "conv2d_7_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_2_permute_batch_normalization_2_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "leaky_re_lu_14_output" : {
+      "k" : 2,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_10_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_4_permute_batch_normalization_4_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_12_permute_batch_normalization_12_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 1
+    },
+    "batch_normalization_5_permute_add_2_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "leaky_re_lu_5_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_5_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_6_permute_batch_normalization_6_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_8_permute_batch_normalization_8_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_11_permute_batch_normalization_11_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "leaky_re_lu_11_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_6_permute_leaky_re_lu_6_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_10_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_3_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "leaky_re_lu_6_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "leaky_re_lu_1_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_11_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_1_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_12_output" : {
+      "k" : 1,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_11_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_10_permute_batch_normalization_10_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_13_output" : {
+      "k" : 2,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_2_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_8_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_1_permute_leaky_re_lu_1_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_3_permute_add_1_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "flatten_1_output" : {
+      "k" : 42,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "leaky_re_lu_13_output" : {
+      "k" : 20,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "batch_normalization_3_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    },
+    "conv2d_1_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "batch_normalization_9_permute_add_4_output" : {
+      "k" : 75,
+      "w" : 7,
+      "n" : 1,
+      "h" : 6
+    },
+    "conv2d_1_permute_batch_normalization_1_output" : {
+      "k" : 6,
+      "w" : 7,
+      "n" : 1,
+      "h" : 75
+    }
+  }
+}

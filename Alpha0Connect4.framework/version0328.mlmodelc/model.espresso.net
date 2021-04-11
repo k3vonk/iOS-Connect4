@@ -1,0 +1,1156 @@
+{
+  "storage" : "model.espresso.weights",
+  "properties" : {
+
+  },
+  "format_version" : 200,
+  "layers" : [
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_1_output",
+      "blob_weights" : 1,
+      "K" : 2,
+      "name" : "conv2d_1",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "input1",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_1_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_1_permute_batch_normalization_1_output",
+      "type" : "transpose",
+      "name" : "conv2d_1_permute_batch_normalization_1"
+    },
+    {
+      "name" : "batch_normalization_1",
+      "bottom" : "conv2d_1_permute_batch_normalization_1_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_1_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 3,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_1_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_1_permute_leaky_re_lu_1_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_1_permute_leaky_re_lu_1"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "batch_normalization_1_permute_leaky_re_lu_1_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_1_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_1"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_2_output",
+      "blob_weights" : 5,
+      "K" : 75,
+      "name" : "conv2d_2",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_1_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_2_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_2_permute_batch_normalization_2_output",
+      "type" : "transpose",
+      "name" : "conv2d_2_permute_batch_normalization_2"
+    },
+    {
+      "name" : "batch_normalization_2",
+      "bottom" : "conv2d_2_permute_batch_normalization_2_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_2_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 7,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_2_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_2_permute_leaky_re_lu_2_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_2_permute_leaky_re_lu_2"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "batch_normalization_2_permute_leaky_re_lu_2_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_2_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_2"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_3_output",
+      "blob_weights" : 9,
+      "K" : 75,
+      "name" : "conv2d_3",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_2_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_3_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_3_permute_batch_normalization_3_output",
+      "type" : "transpose",
+      "name" : "conv2d_3_permute_batch_normalization_3"
+    },
+    {
+      "name" : "batch_normalization_3",
+      "bottom" : "conv2d_3_permute_batch_normalization_3_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_3_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 11,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_3_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_3_permute_add_1_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_3_permute_add_1"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "leaky_re_lu_1_output,batch_normalization_3_permute_add_1_output",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "add_1_output",
+      "type" : "elementwise",
+      "name" : "add_1",
+      "beta" : 0
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "add_1_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_3_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_3"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_4_output",
+      "blob_weights" : 13,
+      "K" : 75,
+      "name" : "conv2d_4",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_3_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_4_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_4_permute_batch_normalization_4_output",
+      "type" : "transpose",
+      "name" : "conv2d_4_permute_batch_normalization_4"
+    },
+    {
+      "name" : "batch_normalization_4",
+      "bottom" : "conv2d_4_permute_batch_normalization_4_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_4_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 15,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_4_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_4_permute_leaky_re_lu_4_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_4_permute_leaky_re_lu_4"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "batch_normalization_4_permute_leaky_re_lu_4_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_4_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_4"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_5_output",
+      "blob_weights" : 17,
+      "K" : 75,
+      "name" : "conv2d_5",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_4_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_5_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_5_permute_batch_normalization_5_output",
+      "type" : "transpose",
+      "name" : "conv2d_5_permute_batch_normalization_5"
+    },
+    {
+      "name" : "batch_normalization_5",
+      "bottom" : "conv2d_5_permute_batch_normalization_5_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_5_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 19,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_5_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_5_permute_add_2_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_5_permute_add_2"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "leaky_re_lu_3_output,batch_normalization_5_permute_add_2_output",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "add_2_output",
+      "type" : "elementwise",
+      "name" : "add_2",
+      "beta" : 0
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "add_2_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_5_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_5"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_6_output",
+      "blob_weights" : 21,
+      "K" : 75,
+      "name" : "conv2d_6",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_5_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_6_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_6_permute_batch_normalization_6_output",
+      "type" : "transpose",
+      "name" : "conv2d_6_permute_batch_normalization_6"
+    },
+    {
+      "name" : "batch_normalization_6",
+      "bottom" : "conv2d_6_permute_batch_normalization_6_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_6_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 23,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_6_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_6_permute_leaky_re_lu_6_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_6_permute_leaky_re_lu_6"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "batch_normalization_6_permute_leaky_re_lu_6_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_6_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_6"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_7_output",
+      "blob_weights" : 25,
+      "K" : 75,
+      "name" : "conv2d_7",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_6_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_7_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_7_permute_batch_normalization_7_output",
+      "type" : "transpose",
+      "name" : "conv2d_7_permute_batch_normalization_7"
+    },
+    {
+      "name" : "batch_normalization_7",
+      "bottom" : "conv2d_7_permute_batch_normalization_7_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_7_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 27,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_7_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_7_permute_add_3_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_7_permute_add_3"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "leaky_re_lu_5_output,batch_normalization_7_permute_add_3_output",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "add_3_output",
+      "type" : "elementwise",
+      "name" : "add_3",
+      "beta" : 0
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "add_3_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_7_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_7"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_8_output",
+      "blob_weights" : 29,
+      "K" : 75,
+      "name" : "conv2d_8",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_7_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_8_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_8_permute_batch_normalization_8_output",
+      "type" : "transpose",
+      "name" : "conv2d_8_permute_batch_normalization_8"
+    },
+    {
+      "name" : "batch_normalization_8",
+      "bottom" : "conv2d_8_permute_batch_normalization_8_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_8_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 31,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_8_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_8_permute_leaky_re_lu_8_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_8_permute_leaky_re_lu_8"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "batch_normalization_8_permute_leaky_re_lu_8_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_8_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_8"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_9_output",
+      "blob_weights" : 33,
+      "K" : 75,
+      "name" : "conv2d_9",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_8_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_9_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_9_permute_batch_normalization_9_output",
+      "type" : "transpose",
+      "name" : "conv2d_9_permute_batch_normalization_9"
+    },
+    {
+      "name" : "batch_normalization_9",
+      "bottom" : "conv2d_9_permute_batch_normalization_9_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_9_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 35,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_9_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_9_permute_add_4_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_9_permute_add_4"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "leaky_re_lu_7_output,batch_normalization_9_permute_add_4_output",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "add_4_output",
+      "type" : "elementwise",
+      "name" : "add_4",
+      "beta" : 0
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "add_4_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_9_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_9"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_10_output",
+      "blob_weights" : 37,
+      "K" : 75,
+      "name" : "conv2d_10",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_9_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_10_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_10_permute_batch_normalization_10_output",
+      "type" : "transpose",
+      "name" : "conv2d_10_permute_batch_normalization_10"
+    },
+    {
+      "name" : "batch_normalization_10",
+      "bottom" : "conv2d_10_permute_batch_normalization_10_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_10_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 39,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_10_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_10_permute_leaky_re_lu_10_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_10_permute_leaky_re_lu_10"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "batch_normalization_10_permute_leaky_re_lu_10_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_10_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_10"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_11_output",
+      "blob_weights" : 41,
+      "K" : 75,
+      "name" : "conv2d_11",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 75,
+      "bottom" : "leaky_re_lu_10_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 4,
+      "pad_value" : 0,
+      "Ny" : 4,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_11_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_11_permute_batch_normalization_11_output",
+      "type" : "transpose",
+      "name" : "conv2d_11_permute_batch_normalization_11"
+    },
+    {
+      "name" : "batch_normalization_11",
+      "bottom" : "conv2d_11_permute_batch_normalization_11_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_11_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 43,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_11_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_11_permute_add_5_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_11_permute_add_5"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "leaky_re_lu_9_output,batch_normalization_11_permute_add_5_output",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "add_5_output",
+      "type" : "elementwise",
+      "name" : "add_5",
+      "beta" : 0
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "add_5_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_11_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_11"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_12_output",
+      "blob_weights" : 45,
+      "K" : 75,
+      "name" : "conv2d_12",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 1,
+      "bottom" : "leaky_re_lu_11_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_12_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_12_permute_batch_normalization_12_output",
+      "type" : "transpose",
+      "name" : "conv2d_12_permute_batch_normalization_12"
+    },
+    {
+      "name" : "batch_normalization_12",
+      "bottom" : "conv2d_12_permute_batch_normalization_12_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_12_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 47,
+      "type" : "batchnorm"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_12_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_12_permute_leaky_re_lu_12_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_12_permute_leaky_re_lu_12"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "batch_normalization_12_permute_leaky_re_lu_12_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_12_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_12"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "conv2d_13_output",
+      "blob_weights" : 49,
+      "K" : 75,
+      "name" : "conv2d_13",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 0,
+      "C" : 2,
+      "bottom" : "leaky_re_lu_11_output",
+      "weights" : {
+
+      },
+      "pad_mode" : 1,
+      "Nx" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "leaky_re_lu_12_output",
+      "weights" : {
+
+      },
+      "mode" : 1,
+      "nd_axis" : 0,
+      "top" : "flatten_1_output",
+      "type" : "flatten",
+      "name" : "flatten_1"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "conv2d_13_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "conv2d_13_permute_batch_normalization_13_output",
+      "type" : "transpose",
+      "name" : "conv2d_13_permute_batch_normalization_13"
+    },
+    {
+      "name" : "batch_normalization_13",
+      "bottom" : "conv2d_13_permute_batch_normalization_13_output",
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_13_output",
+      "C" : 6,
+      "blob_batchnorm_params" : 51,
+      "type" : "batchnorm"
+    },
+    {
+      "nB" : 42,
+      "top" : "dense_1_output",
+      "has_biases" : 0,
+      "name" : "dense_1",
+      "nC" : 20,
+      "blob_weights" : 53,
+      "type" : "inner_product",
+      "has_relu" : 0,
+      "bottom" : "flatten_1_output",
+      "has_tanh" : 0,
+      "weights" : {
+
+      },
+      "has_prelu" : 0
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 0,
+      "axis_k" : 1,
+      "bottom" : "batch_normalization_13_output",
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "top" : "batch_normalization_13_permute_leaky_re_lu_14_output",
+      "type" : "transpose",
+      "name" : "batch_normalization_13_permute_leaky_re_lu_14"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "batch_normalization_13_permute_leaky_re_lu_14_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_14_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_14"
+    },
+    {
+      "alpha" : 0.30000001192092896,
+      "bottom" : "dense_1_output",
+      "weights" : {
+
+      },
+      "mode" : 2,
+      "top" : "leaky_re_lu_13_output",
+      "type" : "activation",
+      "name" : "leaky_re_lu_13"
+    },
+    {
+      "bottom" : "leaky_re_lu_14_output",
+      "weights" : {
+
+      },
+      "mode" : 1,
+      "nd_axis" : 0,
+      "top" : "flatten_2_output",
+      "type" : "flatten",
+      "name" : "flatten_2"
+    },
+    {
+      "nB" : 20,
+      "top" : "output1",
+      "has_biases" : 0,
+      "name" : "value_head",
+      "nC" : 1,
+      "blob_weights" : 55,
+      "type" : "inner_product",
+      "has_relu" : 0,
+      "bottom" : "leaky_re_lu_13_output",
+      "has_tanh" : 1,
+      "weights" : {
+
+      },
+      "has_prelu" : 0
+    },
+    {
+      "nB" : 84,
+      "top" : "output2",
+      "has_biases" : 0,
+      "name" : "policy_head",
+      "nC" : 42,
+      "blob_weights" : 57,
+      "type" : "inner_product",
+      "has_relu" : 0,
+      "bottom" : "flatten_2_output",
+      "has_tanh" : 0,
+      "weights" : {
+
+      },
+      "has_prelu" : 0
+    }
+  ]
+}

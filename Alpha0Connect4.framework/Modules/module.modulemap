@@ -1,0 +1,11 @@
+framework module Alpha0Connect4 {
+  umbrella header "Alpha0Connect4.h"
+
+  export *
+  module * { export * }
+}
+
+module Alpha0Connect4.Swift {
+    header "Alpha0Connect4-Swift.h"
+    requires objc
+}
