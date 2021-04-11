@@ -29,5 +29,6 @@ When a game session is one, the turn that the disc was placed will be displayed,
 # Core Data and Tab Bar Controller
 Persistence in this game only occurs when a game has an outcome. This persistance enables a replay of the game. Core data is saved with attributes botStart, move, outcome, thumbnail, and winningPieces. These attributes are all obtained from the public information of the game. Each replay session is then stored on the History Collection View Controller. Users can click on any past games to replay the actions taken. 
 
-![historyCVC](https://github.com/k3vonk/iOS-Connect4/blob/main/Images/Screen%20Shot%202020-03-24%20at%202.42.55%20PM.png)
+<img src="https://github.com/k3vonk/iOS-Connect4/blob/main/Images/Screen%20Shot%202020-03-24%20at%202.42.55%20PM.png" height="500">
+
 
