@@ -1,7 +1,7 @@
 # iOS-Connect4
 A 4th Year iOS Connect4 project where the player is against alphaC4 Bot
 
-![connect4](
+![connect4](https://github.com/k3vonk/iOS-Connect4/blob/main/Images/connect4.png)
 
 # Architecture
 The development process of the Connect4 iOS game was based on four core features of the physical game:
@@ -24,8 +24,10 @@ The tap gesture was used to drop a disc on a region above the game board. Each r
 
 The game itself is handled by a session, recording which user is in play, the amount of turns that have been executed, and if the game is completed. In order to restart the game, the player must swipe the wedge bar to reset the game. 
 
+When a game session is one, the turn that the disc was placed will be displayed, as well as highlighted.
+
 # Core Data and Tab Bar Controller
 Persistence in this game only occurs when a game has an outcome. This persistance enables a replay of the game. Core data is saved with attributes botStart, move, outcome, thumbnail, and winningPieces. These attributes are all obtained from the public information of the game. Each replay session is then stored on the History Collection View Controller. Users can click on any past games to replay the actions taken. 
 
-
+![historyCVC](https://github.com/k3vonk/iOS-Connect4/blob/main/Images/Screen%20Shot%202020-03-24%20at%202.42.55%20PM.png)
 
